@@ -279,11 +279,72 @@ header p {
     transition: var(--trasition);
 }
 
-.video-card:hover .video-thumbnail::after{
+.video-card:hover .video-thumbnail::after {
     content: '▶';
     opacity: 1;
 }
 
 .video-card:hover .video-thumbnail img {
     transform: scale(1.05);
+}
+
+/* video player section */
+.video-player-section {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--dark);
+    border-radius: var(--border-radius);
+    padding: 15px 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-player-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--dark-light);
+}
+
+.video-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.close-player {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: (--trasition);
+}
+
+.close-player:hover{
+    color: black;
+}
+
+.video-player {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: black;
 }
