@@ -77,6 +77,7 @@ async function searchChannel(channelName) {
 }
 
 function displayChannelInfo(channel) {
+    loading.style.display = 'none';
     const stats = channel.statistics;
     const formatNumber = num => parseInt(num).toLocaleString();
 
